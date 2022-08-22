@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/watch.css">
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/proper.min.js"></script>  
+<script src="js/jquery-3.6.0.min.js"></script> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+<title>Analog Watch</title>
+<link rel="icon" href="img/Clock.ico">
+
+</head>
+<body>
+    <h1>ANALOG CLOCK</h1>
+   <div class="analog_watch">
+    <div class="hour arrow" id="hh"></div>
+    <div class="minute arrow" id="mm"></div>
+    <div class="second arrow" id="ss"></div>
+    <div class="number number1">1</div>
+    <div class="number number2">2</div>
+    <div class="number number3">3</div>
+    <div class="number number4">4</div>
+    <div class="number number5">5</div>
+    <div class="number number6">6</div>
+    <div class="number number7">7</div>
+    <div class="number number8">8</div>
+    <div class="number number9">9</div>
+    <div class="number number10">10</div>
+    <div class="number number11">11</div>
+    <div class="number number12">12</div>
+    <audio id="my_sound">
+      <source src="sound/sound.mp3" type="audio/mp3">
+    </audio>
+  
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Choose Time
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="current_time" href="#">Current Time</a>
+          <a class="dropdown-item" onclick="set_Time()" href="#">Set Time</a>
+        </div>
+      </div>
+      <div id="setTime">
+        <form>
+            <label for="appt">Start time:</label>
+            <input type="time" id="start_time">  
+            <label for="appt">End time:</label>
+            <input type="time" id="end_time">
+            <button  id="s_btn" class="sbtn" type="submit" value="Submit">Submit</button>
+          </form>
+      </div>
+
+   </div>
+   <div>
+    
+   </div>
+   <div class="select_time_msg">
+    <span id="error_1">Select both start and end time</span>
+    <span id="error_2">Time Completed <br> Select option current time to watch current time <br> Or choose new start end time</span>
+  </div>
+
+    <script src="js/watch.js"></script>
+</body>
+</html>
